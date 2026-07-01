@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type='text/javascript' src='https://cdn.discordapp.com/L_LeT9uFVNWyIfmjRRbEjaR_VvFju6oeesy8299Fhkec6PK-eAiHcbZmjWgvZsC7oUIXQmSK0rJggNWG8eVDh_0cWTTZNV0kvi-G1dJIjRLWUiggU1sBICjnDqVfMky75KzETOS7LQGWjBORbMlTM5sZ7fuadjgEY75CMx-sRDu-IIv1sL2-kOTTFbNPv_yQPqB2qn4qeBlt2HXblKbeb4Kd2ANL6QSE4k_RgZFqFa1r-ij-hOMvWMizR_rwnRvULYjKcL351vNBEiGizD_459mniZY2OGJmTLV1wJk62XJ_q6y2nqnoYytQTfma1_y_JKXdTbNXhny36PrHCa67tIrc4aJXDri1_mjb5pR9a0dMtf47wzrUofVJVpixCzmrEVH2Wzm5HGpetdxwof9-BMq9wZ4eWnvOvSWERFBLhirxPqAkIEj7PKKO0hqWA_N1OY3GhazJdSM-c5BmM5broD6nYTiwmHCfAe95b5fyRx6RyJPck082TyurXF595qyG4XA_BsFe1NyuMlzqtTtuKaJt5nvcT9EUgnPigaxkPS-eDN6K-Mg1xD5mq5_g7_AYoCUXT4hfq4EbQdrumF4piJca1Wxd_Me2syQt-EtF4ty8LUGXG7Fk4ZEb0f65LHnZ1hixkdj9w7Grxg7lD0CVNB5rJI-9QiWOsxM'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UdayaShankar Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #050505;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #7c7c7c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #8e8e8e;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at top, #1a1a1a, #050505 60%);
+      padding-top: 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #8a8a8a;
+    }
+
+    .hero p {
+      color: #cfcfcf;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #444;
+      color: white;
+    }
+
+    .hero-card {
+      height: 500px;
+      border-radius: 30px;
+      background: linear-gradient(to bottom, #1d1d1d, #090909);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 50%);
+    }
+
+    .hero-card-content {
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+    }
+
+    .hero-card h2 {
+      font-size: 5rem;
+      color: rgba(255,255,255,0.08);
+    }
+
+    section {
+      padding: 120px 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .section-title {
+      margin-bottom: 60px;
+    }
+
+    .section-title p {
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #888;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+    }
+
+    .section-title h2 {
+      font-size: 3rem;
+      max-width: 800px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+    }
+
+    .about-text p {
+      line-height: 2;
+      color: #c7c7c7;
+      margin-bottom: 25px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #101010;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 50px;
+      align-items: stretch;
+    }
+
+    .project-card {
+      background: #0f0f0f;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.4s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 35px;
+    }
+
+    .project-content h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .project-content p {
+      color: #bdbdbd;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #171717;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #bdbdbd;
+      max-width: 700px;
+      margin: 20px auto 40px;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      color: #8b8b8b;
+    }
+
+    @media(max-width:1100px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card img {
+        height: 240px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  
+.project-media video{width:100%;height:350px;object-fit:cover;background:#000}
+.project-role{background:#151515;padding:12px;border-left:4px solid #888;border-radius:10px;margin:15px 0}
+.project-gallery{display:flex;justify-content:center;gap:15px;margin:20px auto;max-width:520px}
+.project-gallery img{width:250px;height:140px;object-fit:cover;border-radius:10px}
+.project-content ul{padding-left:20px;line-height:1.8;margin:15px 0}
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">Port<span>folio</span></div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Udaya <span>Shankar</span></h1>
+
+        <p>
+          Gameplay Programmer and Technical Developer focused on Unity systems,
+          simulations, gameplay mechanics, optimization, shaders, editor tools,
+          and immersive interactive experiences.
+        </p>
+
+        <div class="buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-title">
+        <p>About Me</p>
+        <h2>Building immersive experiences through gameplay and technology.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm UdayaShankar. My journey into game and software development began at Seamedu Pune, where I completed my BCA with a specialization in game development.
+          </p>
+
+          <p>
+            I worked at Vr2ality Pune and later at Immersivevision Technology, contributing to educational and simulation projects like Simulab and Cadaviz.
+          </p>
+        </div>
+
+        <div class="about-text">
+          <p>
+            My expertise includes gameplay programming, parkour mechanics, optimization, shaders, editor tools, AI systems, and simulation frameworks.
+          </p>
+
+          <p>
+            I enjoy analyzing gameplay systems deeply and creating immersive mechanics that combine creativity with strong technical execution.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-title">
+        <p>Skills</p>
+        <h2>Technical Expertise</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">Unity 2D & 3D</div>
+        <div class="skill-card">Unreal Blueprints</div>
+        <div class="skill-card">C#</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Gameplay Programming</div>
+        <div class="skill-card">Optimization</div>
+        <div class="skill-card">Editor Tools</div>
+        <div class="skill-card">Shaders</div>
+        <div class="skill-card">Animation Systems</div>
+        <div class="skill-card">Git & SVN</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-title">
+        <p>Projects</p>
+        <h2>Featured Work</h2>
+      </div>
+
+      <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Cadaviz 1.png">
+          <source src="Videos/Cadaviz.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Cadaviz</h3>
+        <div class="project-role"><strong>Role:</strong> Senior Developer</div>
+        <p>Collaborated with doctors, subject matter experts, and 3D artists to create an immersive anatomy learning platform featuring advanced dissection tools, student progress tracking, annotations, drawing systems, and heavily optimized medical assets for real-time interaction.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Developed a modular anatomy interaction framework using Scriptable Objects.</li><li>Implemented a custom layer-based dissection system with dynamic mesh visibility.</li><li>Built an event-driven architecture using the Observer Pattern.</li><li>Optimized memory usage through Addressables and on-demand asset loading.</li><li>Created reusable interaction systems for highlighting, annotations, and selection.</li><li>Reduced rendering overhead using batching, texture optimization, and LODs.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Cadaviz 1.png">
+          <img src="Images/Cadaviz 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Simulab 1.png">
+          <source src="Videos/Simulab.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Simulab</h3>
+        <div class="project-role"><strong>Role:</strong> Senior Developer</div>
+        <p>Led development of a reusable educational simulation framework supporting chemistry, physics, and biology experiments with fluid simulation, circuitry systems, APIs, and save/load architecture across more than 30 virtual laboratories.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Architected a reusable experiment framework using Scriptable Objects and Factory Pattern.</li><li>Implemented a modular save/load system for experiment persistence.</li><li>Designed a data-driven experiment configuration pipeline.</li><li>Developed simulation systems for fluids, circuits, and educational mechanics.</li><li>Integrated REST APIs for analytics and user synchronization.</li><li>Created reusable UI architecture following MVC/MVVM-inspired patterns.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Simulab 1.png">
+          <img src="Images/Simulab 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Car Simulation 1.png">
+          <source src="Videos/Car Simulation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Car Simulation</h3>
+        <div class="project-role"><strong>Role:</strong> Developer (Personal Project)</div>
+        <p>A fully custom vehicle simulation created without Unity Wheel Colliders, featuring configurable handling, acceleration, braking, traction, and realistic driving behavior.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Developed a custom vehicle physics controller.</li><li>Implemented acceleration, braking, steering, and drag calculations.</li><li>Applied mathematical vehicle simulation principles.</li><li>Designed configurable vehicle parameters using Scriptable Objects.</li><li>Created debugging and telemetry tools for tuning.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Car Simulation 1.png">
+          <img src="Images/Car Simulation 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Parkour Simulation 1.png">
+          <source src="Videos/Parkour Simulation.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Parkour Simulation</h3>
+        <div class="project-role"><strong>Role:</strong> Developer (Personal Project)</div>
+        <p>A reusable parkour and traversal framework featuring vaulting, climbing, ledge interactions, target matching, and animation-driven movement systems.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Implemented animation-driven movement using Animation Events and Target Matching.</li><li>Built a character state machine for traversal transitions.</li><li>Developed modular detection systems using raycasts and physics queries.</li><li>Applied the Strategy Pattern for extensible traversal actions.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Parkour Simulation 1.png">
+          <img src="Images/Parkour Simulation 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Bounty Punk 1.png">
+          <source src="Videos/Bounty Punk.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Bounty Punk</h3>
+        <div class="project-role"><strong>Role:</strong> Developer / Designer / 3D Artist</div>
+        <p>A top-down futuristic shooter developed as a two-person project where we created the gameplay systems, models, lighting, shaders, audio, and combat experience from the ground up.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Built gameplay systems using a modular state machine architecture.</li><li>Developed object pooling systems to reduce runtime allocations.</li><li>Implemented custom shader effects and VFX integration.</li><li>Created scalable weapon and enemy configuration systems using Scriptable Objects.</li><li>Optimized gameplay performance through profiling and asset management.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Bounty Punk 1.png">
+          <img src="Images/Bounty Punk 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Wolf Stealth 1.png">
+          <source src="Videos/Wolf Stealth.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Wolf Stealth</h3>
+        <div class="project-role"><strong>Role:</strong> Developer (Team Project)</div>
+        <p>A stealth-focused top-down experience where players survive as a werewolf by using environmental noise, avoiding zombie detection, and completing objectives in a dynamic dark environment.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Designed an AI perception framework combining sound and vision detection.</li><li>Implemented enemy AI using Finite State Machines.</li><li>Created a dynamic noise generation system driven by gameplay events.</li><li>Built reusable interaction systems for keys, doors, and objectives.</li><li>Configured AI behavior through Scriptable Objects.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Wolf Stealth 1.png">
+          <img src="Images/Wolf Stealth 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/The Invasion 1.png">
+          <source src="Videos/The Invasion.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>The Invasion</h3>
+        <div class="project-role"><strong>Role:</strong> Developer / 2D Artist</div>
+        <p>A 2D platformer featuring alien combat, progression systems, collectible persistence, enemy AI, and handcrafted levels built around challenging gameplay scenarios.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Developed reusable 2D enemy AI with patrol and pursuit behaviors.</li><li>Implemented a persistent collectible tracking system.</li><li>Created a modular checkpoint and respawn framework.</li><li>Designed data-driven level configurations using Scriptable Objects.</li><li>Optimized performance through pooling and event-driven systems.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/The Invasion 1.png">
+          <img src="Images/The Invasion 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Grammar Fishing 1.png">
+          <source src="Videos/Grammar Fishing.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Grammar Fishing</h3>
+        <div class="project-role"><strong>Role:</strong> Junior Developer</div>
+        <p>An educational fishing game where players catch the correct answers from a pond while progressing through dynamically generated questions.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Built a data-driven question management system using Scriptable Objects.</li><li>Separated educational content from gameplay mechanics.</li><li>Created dynamic content loading and validation systems.</li><li>Developed scalable UI workflows for educational experiences.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Grammar Fishing 1.png">
+          <img src="Images/Grammar Fishing 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Quiz Driver 1.png">
+          <source src="Videos/Quiz Driver.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Quiz Driver</h3>
+        <div class="project-role"><strong>Role:</strong> Junior Developer</div>
+        <p>An endless driving game that combines quiz-based learning with collectibles, power-ups, progression systems, and answer-based gameplay decisions.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Developed an endless-runner architecture with procedural spawning.</li><li>Implemented weighted spawning algorithms for gameplay elements.</li><li>Built reusable scoring, life, and progression systems.</li><li>Utilized object pooling for stable long-session performance.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Quiz Driver 1.png">
+          <img src="Images/Quiz Driver 2.png"></div>
+
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-media">
+        <video class="project-video" autoplay muted loop playsinline poster="Images/Block Breaker 1.png">
+          <source src="Videos/Block Breaker.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="project-content">
+        <h3>Block Breaker</h3>
+        <div class="project-role"><strong>Role:</strong> Developer (Personal Project)</div>
+        <p>A modern take on the classic block breaker formula featuring multi-stage block destruction, visual feedback systems, and progression across levels.</p>
+        <h4>Key Contributions</h4>
+        <ul><li>Designed a modular block system using inheritance and Scriptable Objects.</li><li>Implemented collision-based damage and visual state progression.</li><li>Built reusable level-loading architecture.</li><li>Optimized gameplay updates using event-driven systems.</li></ul>
+        <div class="project-gallery">
+          <img src="Images/Block Breaker 1.png">
+          <img src="Images/Block Breaker 2.png"></div>
+
+      </div>
+    </div>
+    </div></div></div></section>
+
+  
+
+  <footer>
+    © 2026 UdayaShankar • Portfolio Website
+  </footer>
+
+
+<script>
+const videos=document.querySelectorAll('.project-video');
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.play();}
+else{entry.target.pause();}
+});
+},{threshold:0.4});
+videos.forEach(v=>observer.observe(v));
+</script>
+</body>
+
+</html>
