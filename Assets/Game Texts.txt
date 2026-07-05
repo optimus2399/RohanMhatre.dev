@@ -1,0 +1,93 @@
+1.Pool Away Game - Game Developer
+
+Pool Away is a casual mobile sorting puzzle game where players strategically rearrange floating pool tubes to guide swimmers to their matching colored tubes. As levels progress, new mechanics such as immovable obstacles, multiple queues, and color-changing characters introduce increasingly complex puzzles that require careful planning and problem-solving.
+
+My Role
+
+Implemented core gameplay systems and mechanics using Unity and C#.
+Developed dynamic UI systems using Unity UI (uGUI), including gameplay HUD and menu interfaces.
+Designed and implemented player ability systems with reusable and scalable gameplay logic.
+Built and optimized a pathfinding and navigation system to control AI/player movement efficiently.
+Integrated third-party SDKs for analytics, advertising, and other platform services.
+Implemented monetization features, including rewarded ads, interstitial ads, and in-app purchase integrations.
+Debugged, optimized, and maintained gameplay systems to ensure smooth performance across mobile devices.
+
+2. Farm Jam Match
+
+Description
+
+Farm Jam Match is a casual mobile color-matching puzzle game where players help customers navigate a busy farmers' market by matching them with their desired fruits and vegetables. Featuring progressively challenging levels, the game combines strategic thinking with satisfying puzzle mechanics, requiring players to carefully manage queues and plan their moves to clear increasingly complex scenarios.
+
+My Role
+
+Developed gameplay systems and mechanics using Unity and C#.
+Built reusable systems with Scriptable Objects.
+Created custom Unity Editor Tools to improve development workflows.
+Implemented Addressables and Asset Bundles for asset management.
+Developed AI movement and pathfinding systems.
+Built responsive UI using Unity UI (uGUI) and TextMeshPro.
+Integrated third-party SDKs, including Ads, Analytics, and IAP.
+Optimized performance using Object Pooling and mobile-focused optimizations.
+
+3.Idle Supermarket Empire
+
+Description
+
+Idle Supermarket Empire is a casual idle management game where players build and expand a supermarket into a thriving retail business. By unlocking new departments, upgrading staff, and optimizing store operations, players increase profits while managing customer flow and automating their growing empire.
+
+Key Contributions
+
+Developed AI pathfinding and customer behavior systems using Unity and C#.
+Designed and implemented a dynamic event system that introduces gameplay events based on the current game state.
+Applied the Observer Pattern to create a decoupled, event-driven architecture for gameplay systems.
+Built reusable game systems using Scriptable Objects.
+Created custom Unity Editor Tools to improve content creation workflows.
+Developed responsive UI using Unity UI (uGUI) and TextMeshPro.
+Integrated Ads, Analytics, and In-App Purchases (IAP) SDKs.
+
+4.Idle Airport Empire
+
+Description
+
+Idle Airport Empire is a casual idle management simulation where players build and manage a growing airport by expanding terminals, upgrading facilities, and optimizing passenger flow to create a thriving aviation hub.
+
+Key Contributions
+
+Developed core gameplay systems in Unity (C#).
+Implemented passenger AI, pathfinding, and queue management.
+Built scalable systems using Scriptable Objects.
+Created custom Unity Editor Tools for designer workflows.
+Developed UI with Unity UI (uGUI) and TextMeshPro.
+Integrated Ads and Analytics SDKs.
+Optimized gameplay and memory usage for mobile devices.
+
+5.Bus Stop Drop
+
+Description
+
+Bus Stop Drop is a casual puzzle game where players manage busy bus stops by directing passengers to the correct buses while avoiding congestion. As levels progress, increasing passenger numbers and more complex layouts require careful planning, timing, and strategic decision-making.
+
+Key Contributions
+
+Developed core gameplay systems using Unity and C#.
+Implemented passenger movement, AI behaviors, and queue logic.
+Built reusable gameplay data with Scriptable Objects.
+Created custom Unity Editor Tools for level design workflows.
+Developed UI using Unity UI (uGUI) and TextMeshPro.
+Optimized gameplay performance for mobile devices.
+
+6.School Life
+
+Description
+
+School Life is a casual life simulation game where players manage and grow a bustling school by completing daily activities, upgrading facilities, and guiding students through various challenges. Strategic management and progression unlock new areas, improve school operations, and create a more engaging campus experience.
+
+Key Contributions
+
+Developed gameplay systems using Unity and C#.
+Implemented student AI behaviors and navigation systems.
+Built reusable systems with Scriptable Objects.
+Developed UI using Unity UI (uGUI) and TextMeshPro.
+Integrated Ads, Analytics, and third-party SDKs.
+Optimized gameplay and performance for Android and iOS.
+
