@@ -1,429 +1,474 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head><script src="https://cdn.discordapp.com/L_LeT9uFVNWyIfmjRRbEjaR_VvFju6oeesy8299Fhkec6PK-eAiHcbZmjWgvZsC7oUIXQmSK0rJggNWG8eVDh_0cWTTZNV0kvi-G1dJIjRLWUiggU1sBICjnDqVfMky75KzETOS7LQGWjBORbMlTM5sZ7fuadjgEY75CMx-sRDu-IIv1sL2-kOTTFbNPv_yQPqB2qn4qeBlt2HXblKbeb4Kd2ANL6QSE4k_RgZFqFa1r-ij-hOMvWMizR_rwnRvULYjKcL351vNBEiGizD_459mniZY2OGJmTLV1wJk62XJ_q6y2nqnoYytQTfma1_y_JKXdTbNXhny36PrHCa67tIrc4aJXDri1_mjb5pR9a0dMtf47wzrUofVJVpixCzmrEVH2Wzm5HGpetdxwof9-BMq9wZ4eWnvOvSWERFBLhirxPqAkIEj7PKKO0hqWA_N1OY3GhazJdSM-c5BmM5broD6nYTiwmHCfAe95b5fyRx6RyJPck082TyurXF595qyG4XA_BsFe1NyuMlzqtTtuKaJt5nvcT9EUgnPigaxkPS-eDN6K-Mg1xD5mq5_g7_AYoCUXT4hfq4EbQdrumF4piJca1Wxd_Me2syQt-EtF4ty8LUGXG7Fk4ZEb0f65LHnZ1hixkdj9w7Grxg7lD0CVNB5rJI-9QiWOsxM" type="text/javascript"></script>
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Rohan Mhatre Portfolio</title>
+<title>Rohan Mhatre — Unity Game Developer</title>
+<meta name="description" content="Rohan Mhatre, Unity game developer: gameplay programming, AI, UI and optimization for mobile, PC and VR games. Projects include Over-Forged VR, Hollow Corps, Bounty Punk and Simulab."/>
+<meta name="theme-color" content="#050505"/>
+<link rel="canonical" href="https://optimus2399.github.io/RohanMhatre.dev/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://optimus2399.github.io/RohanMhatre.dev/"/>
+<meta property="og:title" content="Rohan Mhatre — Unity Game Developer"/>
+<meta property="og:description" content="Gameplay programming, AI, UI and optimization for mobile, PC and VR games, including a fully hand-tracked VR forging game."/>
+<meta property="og:image" content="https://optimus2399.github.io/RohanMhatre.dev/Assets/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Forging at the anvil in Over-Forged VR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://optimus2399.github.io/RohanMhatre.dev/Assets/og-image.jpg"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050505'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%234fd1c5'%3ERM%3C/text%3E%3C/svg%3E"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+:root{
+  --bg:#050505;
+  --surface:#0f0f0f;
+  --surface-2:#151515;
+  --border:rgba(255,255,255,0.08);
+  --border-strong:rgba(255,255,255,0.2);
+  --text:#ffffff;
+  --text-2:#c7c7c7;
+  --muted:#8a8a8a;
+  --accent:#4fd1c5;
+  --accent-ink:#04110f;
+  --accent-soft:rgba(79,209,197,0.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+img,video{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.container{width:90%;max-width:1300px;margin:auto}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #050505;
-      color: white;
-      overflow-x: hidden;
-    }
+/* ---- nav ---- */
+nav{position:fixed;width:100%;top:0;z-index:1000;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-content{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-size:1.4rem;font-weight:700;text-decoration:none;letter-spacing:.5px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:30px}
+.nav-links a{text-decoration:none;color:var(--text);transition:color .3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:1px solid var(--border-strong);color:var(--text);border-radius:10px;width:42px;height:42px;cursor:pointer;align-items:center;justify-content:center}
+.nav-toggle svg{width:20px;height:20px}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* ---- hero ---- */
+.hero{min-height:100vh;display:flex;align-items:center;background:radial-gradient(circle at 70% 20%,rgba(79,209,197,0.10),transparent 45%),radial-gradient(circle at top,#1a1a1a,var(--bg) 60%);padding-top:100px;border-top:none}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+.eyebrow{display:inline-block;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(79,209,197,0.3);padding:6px 14px;border-radius:30px;font-size:.85rem;margin-bottom:24px}
+.hero h1{font-size:5rem;line-height:1;margin-bottom:24px}
+.hero h1 span{color:var(--muted)}
+.hero p{color:#cfcfcf;line-height:1.8;font-size:1.05rem;margin-bottom:32px;max-width:620px}
+.buttons{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:14px;border:none;cursor:pointer;font-weight:600;font-family:inherit;font-size:.95rem;transition:transform .3s,background .3s,border-color .3s;text-decoration:none}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-secondary{background:transparent;border:1px solid #444;color:var(--text)}
+.btn-secondary:hover{border-color:var(--accent);transform:translateY(-3px)}
+.hero-collage{position:relative;height:500px}
+.hero-collage img{position:absolute;width:72%;aspect-ratio:16/10;object-fit:cover;border-radius:20px;border:1px solid var(--border-strong);box-shadow:0 30px 60px rgba(0,0,0,.6);transition:transform .4s}
+.hero-collage img:nth-child(1){top:0;right:0;transform:rotate(3deg)}
+.hero-collage img:nth-child(2){top:30%;left:0;transform:rotate(-4deg);z-index:2}
+.hero-collage img:nth-child(3){bottom:0;right:6%;transform:rotate(2deg);z-index:3}
+.hero-collage img:hover{transform:rotate(0) scale(1.03);z-index:5}
 
-    .container {
-      width: 90%;
-      max-width: 1300px;
-      margin: auto;
-    }
+/* ---- sections ---- */
+section{padding:120px 0;border-top:1px solid rgba(255,255,255,0.05)}
+.section-title{margin-bottom:60px}
+.section-title p{text-transform:uppercase;letter-spacing:5px;color:var(--accent);margin-bottom:10px;font-size:.8rem}
+.section-title h2{font-size:3rem;max-width:800px}
+.sub-title{font-size:1.6rem;margin:90px 0 10px}
+.sub-lead{color:var(--muted);margin-bottom:36px}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:60px}
+.about-text p{line-height:2;color:var(--text-2);margin-bottom:25px}
 
-    .nav-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-    }
+/* ---- experience ---- */
+.timeline{border-left:2px solid var(--border-strong);padding-left:30px;display:grid;gap:40px}
+.tl-item{position:relative}
+.tl-item::before{content:'';position:absolute;left:-37px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl-when{color:var(--accent);font-size:.85rem;letter-spacing:1px}
+.tl-item h3{font-size:1.3rem;margin:4px 0}
+.tl-item .tl-where{color:var(--muted);margin-bottom:8px}
+.tl-item p{color:var(--text-2);line-height:1.8}
+.tl-item ul{padding-left:20px;color:var(--text-2);line-height:1.8;margin-top:4px}
+.tl-item li::marker{color:var(--accent)}
+#eduBlock .sub-title{margin-top:70px;margin-bottom:30px}
+.contact .location{color:var(--muted);margin-top:28px;font-size:.95rem}
+.contact .email-line{margin-top:24px;font-size:.95rem}
+.contact .email-line a{color:var(--accent);text-decoration:none}
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
+/* ---- skills ---- */
+.skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.skill-group{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:30px;transition:border-color .3s}
+.skill-group:hover{border-color:var(--border-strong)}
+.skill-group-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.skill-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.skill-icon svg{width:22px;height:22px}
+.skill-group h3{font-size:1.15rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#171717;border:1px solid var(--border);padding:8px 14px;border-radius:30px;font-size:.88rem;color:#e5e5e5}
 
-    .logo span {
-      color: #7c7c7c;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #8e8e8e;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background: radial-gradient(circle at top, #1a1a1a, #050505 60%);
-      padding-top: 100px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: 5rem;
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 span {
-      color: #8a8a8a;
-    }
-
-    .hero p {
-      color: #cfcfcf;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 15px 30px;
-      border-radius: 14px;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-
-    .btn-primary {
-      background: white;
-      color: black;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid #444;
-      color: white;
-    }
-
-    .hero-card {
-      height: 500px;
-      border-radius: 30px;
-      background: linear-gradient(to bottom, #1d1d1d, #090909);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .hero-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top, rgba(255,255,255,0.15), transparent 50%);
-    }
-
-    .hero-card-content {
-      position: absolute;
-      bottom: 40px;
-      left: 40px;
-    }
-
-    .hero-card h2 {
-      font-size: 5rem;
-      color: rgba(255,255,255,0.08);
-    }
-
-    section {
-      padding: 120px 0;
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .section-title {
-      margin-bottom: 60px;
-    }
-
-    .section-title p {
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      color: #888;
-      margin-bottom: 10px;
-      font-size: 0.8rem;
-    }
-
-    .section-title h2 {
-      font-size: 3rem;
-      max-width: 800px;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 60px;
-    }
-
-    .about-text p {
-      line-height: 2;
-      color: #c7c7c7;
-      margin-bottom: 25px;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
-    .skill-card {
-      background: #101010;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 25px;
-      border-radius: 20px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(255,255,255,0.3);
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-      gap: 50px;
-      align-items: stretch;
-    }
-
-    .project-card {
-      background: #0f0f0f;
-      border-radius: 30px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: 0.4s;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    .project-card img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-content {
-      padding: 35px;
-    }
-
-    .project-content h3 {
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    .project-content p {
-      color: #bdbdbd;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .tag {
-      background: #171717;
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 10px 16px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      color: #bdbdbd;
-      max-width: 700px;
-      margin: 20px auto 40px;
-      line-height: 1.8;
-    }
-
-    footer {
-      padding: 40px 0;
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      color: #8b8b8b;
-    }
-
-    @media(max-width:1100px) {
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media(max-width:768px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .section-title h2 {
-        font-size: 2rem;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card img {
-        height: 240px;
-      }
-
-      .nav-links {
-        display: none;
-      }
-    }
-  
-/* ---- media (hero) ---- */
+/* ---- projects: shared ---- */
+.project-card{background:var(--surface);border-radius:30px;overflow:hidden;border:1px solid var(--border);transition:transform .4s,border-color .4s,opacity .7s}
+.project-card:hover{border-color:var(--border-strong)}
 .project-media{background:#000;position:relative}
-.project-media.landscape video,
-.project-media.landscape img{width:100%;height:360px;object-fit:cover;display:block}
+.project-media video,.project-media img{display:block;width:100%}
+.project-media.landscape video,.project-media.landscape img{aspect-ratio:16/9;height:auto;object-fit:cover}
 .project-media.portrait{display:flex;justify-content:center;align-items:center;padding:20px 0}
-.project-media.portrait video,
-.project-media.portrait img{height:520px;width:auto;max-width:100%;object-fit:contain;border-radius:14px;display:block}
+.project-media.portrait video,.project-media.portrait img{height:460px;width:auto;max-width:100%;object-fit:contain;border-radius:14px}
+.project-media img{cursor:zoom-in}
+.project-media video{cursor:pointer}
+.vid-toggle{position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;border:1px solid var(--border-strong);background:rgba(0,0,0,.55);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.55;transition:opacity .25s,background .25s;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.vid-toggle svg{width:18px;height:18px}
+.media-frame{position:relative;width:100%}
+.project-media.portrait .media-frame{width:auto;max-width:100%}
+.media-frame:hover .vid-toggle,.vid-toggle:focus-visible,.media-frame.is-paused .vid-toggle{opacity:1}
+.vid-toggle:hover{background:var(--accent);color:var(--accent-ink)}
+.project-content{padding:32px}
+.project-content h3{font-size:1.9rem;margin-bottom:12px}
+.project-content p{color:#bdbdbd;line-height:1.8;margin-bottom:18px}
+.project-role{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:30px;font-size:.85rem;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tag{background:#171717;border:1px solid var(--border);padding:6px 12px;border-radius:30px;font-size:.78rem;color:#d4d4d4}
+.project-content h4{margin:8px 0 6px;font-size:1rem}
+.project-content ul{padding-left:20px;line-height:1.8;margin:6px 0;color:#d9d9d9}
+.project-content li::marker{color:var(--accent)}
+details.more summary{cursor:pointer;color:var(--accent);font-size:.9rem;margin-top:6px;list-style:none;display:inline-flex;align-items:center;gap:6px}
+details.more summary::-webkit-details-marker{display:none}
+details.more summary::before{content:'+';font-weight:700}
+details.more[open] summary::before{content:'−'}
+details.more[open] summary .when-closed{display:none}
+details.more:not([open]) summary .when-open{display:none}
+.project-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.project-links .btn{padding:10px 18px;font-size:.85rem}
 
-/* ---- content ---- */
-.project-role{background:#151515;padding:12px;border-left:4px solid #888;border-radius:10px;margin:15px 0}
-.project-content h4{margin:18px 0 4px}
-.project-content ul{padding-left:20px;line-height:1.8;margin:10px 0}
-
-/* ---- gallery ---- */
-.project-gallery{display:flex;gap:15px;margin:24px 0 4px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.project-gallery{display:flex;gap:12px;margin:22px 0 4px;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
 .project-gallery::-webkit-scrollbar{height:6px}
 .project-gallery::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:6px}
-.project-gallery.landscape{justify-content:center;flex-wrap:wrap}
-.project-gallery.landscape img{width:250px;height:140px;object-fit:cover;border-radius:10px}
-.project-gallery.portrait{justify-content:flex-start}
-.project-gallery.portrait img{height:340px;width:auto;flex:0 0 auto;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,0.08)}
-.project-gallery img{transition:0.3s}
-.project-gallery img:hover{transform:translateY(-4px)}
-.desc-muted{color:#8a8a8a!important;font-style:italic}
+.project-gallery button{background:none;border:none;padding:0;cursor:zoom-in;flex:0 0 auto;border-radius:10px}
+.project-gallery img{display:block;border-radius:10px;border:1px solid var(--border);transition:transform .3s}
+.project-gallery button:hover img{transform:translateY(-4px)}
+.project-gallery.landscape img{width:200px;height:112px;object-fit:cover}
+.project-gallery.portrait img{height:220px;width:auto;object-fit:cover}
+.project-gallery figure{flex:0 0 auto;margin:0}
+.project-gallery figcaption{font-size:.75rem;color:var(--muted);margin-top:6px;line-height:1.4}
+.project-gallery.landscape figure{width:200px}
+.project-gallery.captioned{justify-content:flex-start;flex-wrap:nowrap}
+
+/* ---- featured projects ---- */
+.featured-list{display:grid;gap:50px}
+.featured .featured-inner{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.project-content{min-width:0}
+.featured .project-media{display:flex;align-items:center;height:100%}
+.featured:nth-child(even) .project-media{order:2}
+.featured.no-media .featured-inner{grid-template-columns:minmax(0,1fr)}
+.featured.no-media .project-content{padding:44px;border-left:4px solid var(--accent)}
+.featured.no-media .project-content > p{max-width:900px}
+@media(min-width:1001px){.featured.no-media .project-content ul{columns:2;column-gap:48px}.featured.no-media .project-content li{break-inside:avoid}}
+
+/* ---- mobile titles ---- */
+.compact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px;align-items:start}
+.compact .project-media.portrait video,.compact .project-media.portrait img{height:380px}
+.compact .project-content{padding:26px}
+.compact .project-content h3{font-size:1.4rem}
+.compact .project-content p{font-size:.92rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.compact .project-gallery.portrait img{height:160px}
+
+/* ---- contact ---- */
+.contact{text-align:center;background:radial-gradient(circle at center,rgba(79,209,197,0.08),transparent 60%)}
+.contact .section-title h2{margin:0 auto}
+.contact .lead{color:#bdbdbd;max-width:640px;margin:-30px auto 40px;line-height:1.8}
+.contact .buttons{justify-content:center}
+
+footer{padding:40px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.05);color:#8b8b8b}
+
+/* ---- lightbox ---- */
+.lightbox{position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:60px 70px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:12px}
+.lb-btn{position:absolute;background:rgba(255,255,255,.08);border:1px solid var(--border-strong);color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:1.4rem;display:flex;align-items:center;justify-content:center}
+.lb-btn[hidden]{display:none}
+.lb-btn:hover{background:var(--accent);color:var(--accent-ink)}
+.lb-close{top:16px;right:16px}
+.lb-prev{left:14px;top:50%;transform:translateY(-50%)}
+.lb-next{right:14px;top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:18px;left:70px;right:70px;text-align:center;color:#d4d4d4;font-size:.9rem}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .project-card,.btn,.hero-collage img{transition:none}
+}
+
+/* ---- responsive ---- */
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-collage{height:380px;max-width:560px}
+  .featured .featured-inner{grid-template-columns:minmax(0,1fr)}
+  .featured:nth-child(even) .project-media{order:0}
+}
+@media(max-width:768px){
+  .hero h1{font-size:3.2rem}
+  .section-title h2{font-size:2rem}
+  section{padding:90px 0}
+  .hero-collage{height:280px}
+  .project-content{padding:24px}
+  .project-content h3{font-size:1.5rem}
+  .project-media.portrait video,.project-media.portrait img,
+  .compact .project-media.portrait video,.compact .project-media.portrait img{height:380px}
+  .compact-grid{grid-template-columns:1fr}
+  .nav-toggle{display:inline-flex}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(5,5,5,.97);border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:16px 5%;border-top:1px solid var(--border)}
+  .lightbox{padding:60px 10px}
+  .lb-prev,.lb-next{top:auto;bottom:10px;transform:none}
+}
 </style>
 </head>
 <body>
 <nav>
-<div class="container nav-content">
-<div class="logo">Port<span>folio</span></div>
-<div class="nav-links">
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-</div>
-</div>
+  <div class="container nav-content">
+    <a class="logo" href="#top">Rohan<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience" id="navExperience" hidden>Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 </nav>
-<section class="hero">
-<div class="container hero-grid">
-<div>
-<h1>Rohan <span>Mhatre</span></h1>
-<p>
-          Versatile Unity Game Developer with experience designing, developing, and optimizing interactive 2D and 3D games for mobile and PC. Skilled in C#, gameplay programming, UI development, performance optimization, and scalable game systems. Passionate about solving technical challenges and creating engaging player experiences through collaborative development.
-        </p>
-<div class="buttons">
-<a class="btn btn-primary" href="#projects">View Projects</a>
-</div>
-</div>
-</div>
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Unity Game Developer · Mobile, PC &amp; VR</span>
+      <h1>Rohan <span>Mhatre</span></h1>
+      <p>Versatile Unity Game Developer with experience designing, developing, and optimizing interactive 2D and 3D games for mobile and PC. Skilled in C#, gameplay programming, UI development, performance optimization, and scalable game systems. Passionate about solving technical challenges and creating engaging player experiences through collaborative development.</p>
+      <div class="buttons" id="heroButtons">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-collage" aria-hidden="true">
+      <img src="Assets/Simulab/Simulab%201.jpg" alt=""/>
+      <img src="Assets/Bounty%20Punk/BP_Image2.jpg" alt=""/>
+      <img src="Assets/Hollow%20Corps/Hollow%20Corps%20Demo%200.0.1.1%20Screenshot%202026.07.05%20-%2002.33.36.58.jpg" alt=""/>
+    </div>
+  </div>
 </section>
+
 <section id="about">
-<div class="container">
-<div class="section-title">
-<p>Profile</p>
-<h2>Game Developer</h2>
-</div>
-<div class="about-grid">
-<div class="about-text"><p>I'm a Unity Game Developer with professional experience building mobile, PC, and simulation-based applications. I specialize in gameplay programming, scalable systems, AI, UI development, and performance optimization.</p><p>I've contributed to commercial games, educational simulations, and independent projects, creating reusable architectures and polished gameplay experiences.</p></div>
-<div class="about-text"><p>I enjoy solving complex technical challenges, writing clean and maintainable code, and collaborating with multidisciplinary teams to bring creative ideas to life.</p><p>I'm always looking to learn new technologies and build engaging experiences that combine solid engineering with great gameplay.</p></div>
-</div>
-</div>
+  <div class="container reveal">
+    <div class="section-title">
+      <p>Profile</p>
+      <h2>Game Developer</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text"><p>I'm a Unity game developer based in Manchester, UK, with three years of professional experience building 2D and 3D games for mobile and PC. I'm strongest in C# gameplay programming, UI implementation and performance optimisation, with additional AR/VR and metaverse experience.</p><p>I've worked at four studios, on casual mobile games for Android and iOS, metaverse projects, and interactive 3D science simulations, and I studied for an MSc in Game Development at Manchester Metropolitan University (2025–2026), where I built a fully hand-tracked VR forging game.</p></div>
+      <div class="about-text"><p>I enjoy solving complex technical challenges, writing clean and maintainable code, and working in fast-paced, cross-functional teams, including game jams, to bring creative ideas to life.</p><p>I'm always looking to learn new technologies and build engaging experiences that combine solid engineering with great gameplay.</p></div>
+    </div>
+  </div>
 </section>
+
+<section id="experience" hidden>
+  <div class="container reveal">
+    <div class="section-title">
+      <p>Experience</p>
+      <h2>Where I've Worked</h2>
+    </div>
+    <div class="timeline" id="timeline"></div>
+    <div id="eduBlock" hidden>
+      <h3 class="sub-title">Education</h3>
+      <div class="timeline" id="eduTimeline"></div>
+    </div>
+  </div>
+</section>
+
 <section id="skills">
-<div class="container">
-<div class="section-title">
-<p>Skills</p>
-<h2>Technical Expertise</h2>
-</div>
-<div class="skills-grid"><div class="skill-card">Unity Engine</div><div class="skill-card">Unity 2D &amp; 3D</div><div class="skill-card">C#</div><div class="skill-card">Gameplay Programming</div><div class="skill-card">AI Systems</div><div class="skill-card">Scriptable Objects</div><div class="skill-card">Editor Tools</div><div class="skill-card">Addressables</div><div class="skill-card">Asset Bundles</div><div class="skill-card">Optimization</div><div class="skill-card">Shader Graph</div><div class="skill-card">Animation Systems</div><div class="skill-card">UI Development</div><div class="skill-card">Physics</div><div class="skill-card">Git &amp; GitHub</div></div>
-</div>
+  <div class="container reveal">
+    <div class="section-title">
+      <p>Skills</p>
+      <h2>Technical Expertise</h2>
+    </div>
+    <div class="skill-groups" id="skillGroups"></div>
+  </div>
 </section>
+
 <section id="projects">
-<div class="container">
-<div class="section-title">
-<p>Projects</p>
-<h2>Featured Work</h2>
-</div>
-<div class="projects-grid" id="projectsGrid"></div></div></section>
+  <div class="container">
+    <div class="section-title reveal">
+      <p>Projects</p>
+      <h2>Featured Work</h2>
+    </div>
+    <div class="featured-list" id="featuredList"></div>
+    <h3 class="sub-title reveal">Mobile Titles</h3>
+    <p class="sub-lead reveal">Casual, puzzle and idle games for Android and iOS.</p>
+    <div class="compact-grid" id="compactGrid"></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container reveal">
+    <div class="section-title">
+      <p>Contact</p>
+      <h2>Let's Build Something</h2>
+    </div>
+    <p class="lead">I'm open to game development roles and collaborations. Reach out and I'll get back to you.</p>
+    <div class="buttons" id="contactButtons"></div>
+  </div>
+</section>
+
 <footer>
-    © 2026 Rohan Mhatre • Portfolio Website
-  </footer>
+  © <span id="year">2026</span> Rohan Mhatre • Unity Game Developer
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image">‹</button>
+  <img id="lbImg" alt=""/>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next image">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
 <script>
+/* ============================================================
+   CONTACT — fill these in. Empty values are hidden.
+     email   : "you@example.com"
+     cv      : path to your résumé PDF inside the repo, e.g. "Assets/Rohan_Mhatre_CV.pdf"
+     others  : full URLs
+   ============================================================ */
+const CONTACT = {
+  email:    "rvmhatre.23@gmail.com",
+  cv:       "Assets/Rohan_Mhatre_CV.pdf",
+  linkedin: "https://www.linkedin.com/in/rohan-mhatre-99646418a/",
+  github:   "",
+  itch:     "",
+  artstation: "",
+  location: "Manchester, United Kingdom"
+};
+
+/* ============================================================
+   EXPERIENCE — the section stays hidden while this is empty.
+   Fields: when, role, where, points (bullet list) or summary (one line)
+   ============================================================ */
+const EXPERIENCE = [
+  { when:"Sep 2024 – Jul 2025", role:"Unity Developer", where:"Elixirgamelabs",
+    points:[
+      "Built and optimised casual 2D and 3D mobile games for Android and iOS.",
+      "Implemented core gameplay mechanics and UI systems, and improved game performance.",
+      "Worked with designers and artists to deliver polished, player-ready releases."
+    ] },
+  { when:"Sep 2022 – Sep 2023", role:"Game Developer (Unity/Unreal)", where:"Mobiloitte Technologies India Pvt. Ltd.",
+    points:[
+      "Designed and developed gameplay systems for games and metaverse projects.",
+      "Created immersive environments with cross-functional teams.",
+      "Contributed to UI, game mechanics and overall user experience."
+    ] },
+  { when:"Dec 2021 – Jul 2022", role:"Unity Developer", where:"Immersive Vision Technology Pvt. Ltd.",
+    points:[
+      "Developed interactive 3D science simulations with animations and UI systems.",
+      "Built projects from the ground up, including controls and user interaction logic."
+    ] },
+  { when:"Feb 2021 – Aug 2021", role:"Level Designer and Play Tester", where:"Global Step",
+    points:[
+      "Designed and playtested levels for mobile games.",
+      "Identified gameplay issues and gave feedback that improved the player experience."
+    ] }
+];
+
+/* EDUCATION — shown under Experience */
+const EDUCATION = [
+  { when:"Sep 2025 – Sep 2026", role:"MSc Game Development", where:"Manchester Metropolitan University" },
+  { when:"Jun 2018 – Jun 2021", role:"Bachelor of Computer Application (Game Development)", where:"Seamedu School of Pro-Expressionism" }
+];
+
+/* ============================================================
+   SKILLS — grouped.
+   ============================================================ */
+const SKILLS = [
+  { title:"Engines & Rendering", icon:"cube",
+    items:["Unity Engine","Unity 2D & 3D","Unreal Engine","Shader Graph","Animation Systems","Physics"] },
+  { title:"Programming & Architecture", icon:"code",
+    items:["C#","Gameplay Programming","AI Systems","Scriptable Objects","Optimization"] },
+  { title:"XR & Immersive", icon:"vr",
+    items:["VR Development","Hand Tracking","OpenXR / Meta XR","AR/VR","Metaverse Projects"] },
+  { title:"Tools & Pipeline", icon:"tool",
+    items:["Editor Tools","Addressables","Asset Bundles","UI/UX Implementation","Git & GitHub"] },
+  { title:"Design & Process", icon:"design",
+    items:["Game Design","Level Design","Playtesting","Agile Workflows","Team Collaboration"] }
+];
+
 /* ============================================================
    PROJECT DATA — edit here to add projects or fill descriptions.
    Fields:
      title        : project name
      folder       : subfolder inside /Assets
-     role         : your role (use "To be added" if unknown)
+     role         : your role
+     featured     : true = large card at the top, false = "Mobile Titles" grid
      orientation  : "landscape" or "portrait"
      video        : filename of the video, or null if none
      images       : array of image filenames (any number)
+     tags         : short labels (genre, platform, team size, year…)
+     links        : optional [{label:"Google Play", url:"https://..."}]
      description  : text, or null for a "To be added" placeholder
      contributions: array of bullet points (empty [] to hide the section)
+                    featured cards show the first 4, the rest behind "Show more"
    ============================================================ */
 const projects=[
+  {
+    title:"Over-Forged VR",
+    folder:"Over-Forged VR",
+    role:"Developer · MSc Dissertation",
+    featured:true,
+    orientation:"landscape",
+    video:"OverForged_Highlights.mp4",
+    images:[
+      {file:"OF_163743.jpg", caption:"Anvil forging with hammer modes"},
+      {file:"OF_162925.jpg", caption:"Hand-tracked overview of the diorama forge"},
+      {file:"OF_164626.jpg", caption:"Orders board at the delivery station"},
+      {file:"OF_164913.jpg", caption:"Buying materials at the shop"},
+      {file:"OF_163927.jpg", caption:"Smelting ore in the furnace"},
+      {file:"OF_163431.jpg", caption:"Recipe board: hammer-mode sequences"},
+      {file:"OF_164338.jpg", caption:"Assembly with part-mismatch detection"},
+      {file:"OF_164516.jpg", caption:"Gesture-cast enchanting"},
+      {file:"OF_164723.jpg", caption:"Storage and put-back"}
+    ],
+    tags:["Virtual reality","Fully hand-tracked","Crafting & management","Unity 6"],
+    links:[],
+    description:"Over-Forged VR is a diorama-scale virtual reality blacksmithing and forge-management game, built as my MSc dissertation project at Manchester Metropolitan University. The game is fully hand-tracked, with no controllers: the player stands over a miniature forge and runs the whole production line with their own hands, buying materials, smelting ore, hammering parts into shape, assembling weapons, casting enchantments with hand poses, and delivering finished pieces against time-pressured orders.",
+    contributions:[
+      "Built the entire game around full hand tracking, with no controllers: every grab, hammer strike, button press and enchantment is done with the player's own hands.",
+      "Built the full station-based production loop: shop, furnace smelting, anvil forging, weapon assembly, enchanting, and order delivery.",
+      "Implemented physical hammer-strike detection with ordered hammer modes and ingot deformation to forge individual weapon parts.",
+      "Designed a data-driven crafting model with Scriptable Objects for materials, part types, forge and assembly recipes, and enchantments, shared across every station.",
+      "Developed gesture-cast enchantments triggered by hand poses at the enchantment table.",
+      "Created order generation, an in-game economy, and a storage system with labelled dispensers and put-back.",
+      "Used event-driven communication (UnityEvents and C# events) to keep stations, UI and game state decoupled.",
+      "Handled diorama-scale VR comfort: teleporting between forge and anvil with a fixed, height-matched eye level.",
+      "Planned a playtest evaluation covering usability (SUS), game experience, interaction quality and VR comfort."
+    ]
+  },
   {
     title:"Bounty Punk",
     folder:"Bounty Punk",
     role:"Developer / Designer / 3D Artist",
+    featured:true,
     orientation:"landscape",
     video:"BP_Video.mp4",
-    images:["BP_Image1.PNG","BP_Image2.PNG"],
+    images:["BP_Image1.jpg","BP_Image2.jpg"],
+    tags:["Top-down shooter","2-person team","Gameplay · Art · Audio"],
+    links:[],
     description:"A top-down futuristic shooter developed as a two-person project where we created the gameplay systems, models, lighting, shaders, audio, and combat experience from the ground up.",
     contributions:[
       "Built gameplay systems using a modular state machine architecture.",
@@ -437,9 +482,12 @@ const projects=[
     title:"Simulab",
     folder:"Simulab",
     role:"Developer",
+    featured:true,
     orientation:"landscape",
     video:"Simulab.mp4",
-    images:["Simulab 1.png","Simulab 2.png"],
+    images:["Simulab 1.jpg","Simulab 2.jpg"],
+    tags:["Educational simulation","30+ virtual labs","Chemistry · Physics · Biology"],
+    links:[],
     description:"Led development of a reusable educational simulation framework supporting chemistry, physics, and biology experiments with fluid simulation, circuitry systems, APIs, and save/load architecture across more than 30 virtual laboratories.",
     contributions:[
       "Architected a reusable experiment framework using Scriptable Objects and Factory Pattern.",
@@ -454,13 +502,16 @@ const projects=[
     title:"Hollow Corps",
     folder:"Hollow Corps",
     role:"Gameplay Programmer",
+    featured:true,
     orientation:"landscape",
     video:"Hollow Corps.mp4",
     images:[
-      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.33.36.58.png",
-      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.34.36.62.png",
-      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.45.34.02.png"
+      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.33.36.58.jpg",
+      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.34.36.62.jpg",
+      "Hollow Corps Demo 0.0.1.1 Screenshot 2026.07.05 - 02.45.34.02.jpg"
     ],
+    tags:["Turn-based tactics","Third-person combat","Procedural maps"],
+    links:[],
     description:"Hollow Corps is a turn-based tactical shooter inspired by XCOM, combining strategic squad management with immersive third-person combat. Players command their squad from a tactical perspective before taking direct control of individual soldiers to move, manually aim, shoot, and use abilities. Procedurally generated maps with diverse biomes ensure every mission presents a unique battlefield and new tactical opportunities.",
     contributions:[
       "Developed the tactical camera system for strategic gameplay, unit selection, and deployment.",
@@ -479,9 +530,12 @@ const projects=[
     title:"Pool Away",
     folder:"Pool Away",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:"Pool Away.mp4",
-    images:["Pool Away 1.png","Pool Away 2.webp"],
+    images:["Pool Away 1.jpg","Pool Away 2.webp"],
+    tags:["Sorting puzzle","Mobile"],
+    links:[],
     description:"Pool Away is a casual mobile sorting puzzle game where players strategically rearrange floating pool tubes to guide swimmers to their matching colored tubes. As levels progress, new mechanics such as immovable obstacles, multiple queues, and color-changing characters introduce increasingly complex puzzles that require careful planning and problem-solving.",
     contributions:[
       "Implemented core gameplay systems and mechanics using Unity and C#.",
@@ -497,9 +551,12 @@ const projects=[
     title:"Idle Airport Empire",
     folder:"Airport Empire",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:null,
     images:["AP 1.webp","AP 2.webp","AP 3.webp"],
+    tags:["Idle management","Mobile"],
+    links:[],
     description:"Idle Airport Empire is a casual idle management simulation where players build and manage a growing airport by expanding terminals, upgrading facilities, and optimizing passenger flow to create a thriving aviation hub.",
     contributions:[
       "Developed core gameplay systems in Unity (C#).",
@@ -515,9 +572,12 @@ const projects=[
     title:"Idle Supermarket Empire",
     folder:"Idle Supermarket",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:null,
-    images:["ISE 1.webp","ISE 2.webp","ISE 3.webp"],
+    images:["ISE 1.jpg","ISE 2.jpg","ISE 3.jpg"],
+    tags:["Idle management","Mobile"],
+    links:[],
     description:"Idle Supermarket Empire is a casual idle management game where players build and expand a supermarket into a thriving retail business. By unlocking new departments, upgrading staff, and optimizing store operations, players increase profits while managing customer flow and automating their growing empire.",
     contributions:[
       "Developed AI pathfinding and customer behavior systems using Unity and C#.",
@@ -533,9 +593,12 @@ const projects=[
     title:"Farm Jam Match",
     folder:"Farm Jam Match",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:null,
-    images:["Farm Jam 1.webp","Farm Jam 2.webp","Farm Jam 3.webp"],
+    images:["Farm Jam 1.jpg","Farm Jam 2.webp","Farm Jam 3.jpg"],
+    tags:["Color-matching puzzle","Mobile"],
+    links:[],
     description:"Farm Jam Match is a casual mobile color-matching puzzle game where players help customers navigate a busy farmers' market by matching them with their desired fruits and vegetables. Featuring progressively challenging levels, the game combines strategic thinking with satisfying puzzle mechanics, requiring players to carefully manage queues and plan their moves to clear increasingly complex scenarios.",
     contributions:[
       "Developed gameplay systems and mechanics using Unity and C#.",
@@ -552,9 +615,12 @@ const projects=[
     title:"School Life",
     folder:"School Life",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:null,
     images:["SL 1.webp","SL 2.webp","SL 3.webp"],
+    tags:["Life simulation","Android & iOS"],
+    links:[],
     description:"School Life is a casual life simulation game where players manage and grow a bustling school by completing daily activities, upgrading facilities, and guiding students through various challenges. Strategic management and progression unlock new areas, improve school operations, and create a more engaging campus experience.",
     contributions:[
       "Developed gameplay systems using Unity and C#.",
@@ -569,9 +635,12 @@ const projects=[
     title:"Bus Stop Drop",
     folder:"BSD",
     role:"Game Developer",
+    featured:false,
     orientation:"portrait",
     video:null,
-    images:["BSD 1.webp","BSD 2.webp","BSD 3.webp"],
+    images:["BSD 1.webp","BSD 2.webp","BSD 3.jpg"],
+    tags:["Puzzle","Mobile"],
+    links:[],
     description:"Bus Stop Drop is a casual puzzle game where players manage busy bus stops by directing passengers to the correct buses while avoiding congestion. As levels progress, increasing passenger numbers and more complex layouts require careful planning, timing, and strategic decision-making.",
     contributions:[
       "Developed core gameplay systems using Unity and C#.",
@@ -584,65 +653,207 @@ const projects=[
   }
 ];
 
-/* ---- dynamic renderer ---- */
+/* ---- helpers ---- */
 const asset=(folder,file)=>encodeURI("Assets/"+folder+"/"+file);
-const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+// an image entry is either "file.jpg" or {file:"file.jpg", caption:"..."}
+const imgFile=x=>typeof x==="string"?x:x.file;
+const PLAY_ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>';
+const PAUSE_ICON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>';
+const imgCap=x=>typeof x==="string"?"":(x.caption||"");
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const ICONS={
+  cube:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>',
+  code:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg>',
+  tool:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>'
+};
+ICONS.vr='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 8h18v8h-5l-2-3h-4l-2 3H3z"/><circle cx="7.5" cy="12" r="1.2"/><circle cx="16.5" cy="12" r="1.2"/></svg>';
+ICONS.design='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.9 1.2-1.8-.5-1-.1-2.2 1.1-2.2H17a4 4 0 0 0 4-4c0-5.5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="8" r="1"/></svg>';
 
-function buildMedia(p){
-  const hasVideo=!!p.video;
-  if(hasVideo){
-    const poster=p.images.length?` poster="${asset(p.folder,p.images[0])}"`:"";
-    return `<div class="project-media ${p.orientation}">
-      <video class="project-video" autoplay loop muted playsinline${poster}>
-        <source src="${asset(p.folder,p.video)}" type="video/mp4"/>
-      </video></div>`;
+/* ---- skills ---- */
+document.getElementById("skillGroups").innerHTML = SKILLS.map(g=>`
+  <div class="skill-group">
+    <div class="skill-group-head"><div class="skill-icon">${ICONS[g.icon]||""}</div><h3>${esc(g.title)}</h3></div>
+    <div class="chips">${g.items.map(i=>`<span class="chip">${esc(i)}</span>`).join("")}</div>
+  </div>`).join("");
+
+/* ---- experience & education ---- */
+const tlItem=e=>`
+    <div class="tl-item">
+      <div class="tl-when">${esc(e.when||"")}</div>
+      <h3>${esc(e.role||"")}</h3>
+      <div class="tl-where">${esc(e.where||"")}</div>
+      ${e.summary?`<p>${esc(e.summary)}</p>`:""}
+      ${e.points&&e.points.length?`<ul>${e.points.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}
+    </div>`;
+if(EXPERIENCE.length||EDUCATION.length){
+  document.getElementById("experience").hidden=false;
+  document.getElementById("navExperience").hidden=false;
+  document.getElementById("timeline").innerHTML = EXPERIENCE.map(tlItem).join("");
+  if(EDUCATION.length){
+    document.getElementById("eduTimeline").innerHTML = EDUCATION.map(tlItem).join("");
+    document.getElementById("eduBlock").hidden=false;
   }
-  // no video: use the first image as a poster in the same media frame as videos
+}
+
+/* ---- contact ---- */
+(function(){
+  const c=CONTACT, out=[];
+  if(c.email)      out.push(`<a class="btn btn-primary" href="mailto:${esc(c.email)}">Email Me</a>`);
+  if(c.cv)         out.push(`<a class="btn btn-secondary" href="${esc(encodeURI(c.cv))}" target="_blank" rel="noopener">Download CV</a>`);
+  if(c.linkedin)   out.push(`<a class="btn btn-secondary" href="${esc(c.linkedin)}" target="_blank" rel="noopener">LinkedIn</a>`);
+  if(c.github)     out.push(`<a class="btn btn-secondary" href="${esc(c.github)}" target="_blank" rel="noopener">GitHub</a>`);
+  if(c.itch)       out.push(`<a class="btn btn-secondary" href="${esc(c.itch)}" target="_blank" rel="noopener">itch.io</a>`);
+  if(c.artstation) out.push(`<a class="btn btn-secondary" href="${esc(c.artstation)}" target="_blank" rel="noopener">ArtStation</a>`);
+  document.getElementById("contactButtons").innerHTML = out.length ? out.join("")
+    : `<p style="color:var(--muted)">Contact links coming soon.</p>`;
+  const extra=[];
+  if(c.email)    extra.push(`<p class="email-line"><a href="mailto:${esc(c.email)}">${esc(c.email)}</a></p>`);
+  if(c.location) extra.push(`<p class="location">Based in ${esc(c.location)}</p>`);
+  document.getElementById("contactButtons").insertAdjacentHTML("afterend",extra.join(""));
+  if(c.cv){
+    document.getElementById("heroButtons").insertAdjacentHTML("beforeend",
+      `<a class="btn btn-secondary" href="${esc(encodeURI(c.cv))}" target="_blank" rel="noopener">Download CV</a>`);
+  }
+})();
+
+/* ---- projects ---- */
+function buildMedia(p,idx){
+  if(p.video){
+    const poster=p.images.length?` poster="${asset(p.folder,imgFile(p.images[0]))}"`:"";
+    return `<div class="project-media ${p.orientation}"><div class="media-frame">
+      <video class="project-video" loop muted playsinline preload="none"${poster} aria-label="${esc(p.title)} gameplay video">
+        <source src="${asset(p.folder,p.video)}" type="video/mp4"/>
+      </video>
+      <button type="button" class="vid-toggle" aria-label="Play ${esc(p.title)} video">${PLAY_ICON}</button></div></div>`;
+  }
   if(p.images.length){
     return `<div class="project-media ${p.orientation}">
-      <img src="${asset(p.folder,p.images[0])}" alt="${esc(p.title)}"/></div>`;
+      <img src="${asset(p.folder,imgFile(p.images[0]))}" alt="${esc(imgCap(p.images[0])||p.title+" screenshot")}" loading="lazy" data-project="${idx}" data-index="0"/></div>`;
   }
   return "";
 }
 
-function buildGallery(p){
-  // no-video cards use the first image as the poster hero, so skip it in the gallery
-  const usedFirstImage = !p.video;
-  const imgs = usedFirstImage ? p.images.slice(1) : p.images;
+function buildGallery(p,idx){
+  // without a video the first image is already the hero, so skip it here
+  const start = p.video ? 0 : 1;
+  const imgs = p.images.slice(start);
   if(!imgs.length) return "";
-  const items = imgs.map(f=>`<img src="${asset(p.folder,f)}" alt="${esc(p.title)}"/>`).join("");
-  return `<div class="project-gallery ${p.orientation}">${items}</div>`;
+  const captioned = imgs.some(x=>imgCap(x));
+  const items = imgs.map((x,i)=>{
+    const cap=imgCap(x), alt=cap||`${p.title} screenshot ${i+start+1}`;
+    return `<figure><button type="button" aria-label="Enlarge: ${esc(alt)}"><img src="${asset(p.folder,imgFile(x))}" alt="${esc(alt)}" loading="lazy" data-project="${idx}" data-index="${i+start}"/></button>${cap?`<figcaption>${esc(cap)}</figcaption>`:""}</figure>`;
+  }).join("");
+  return `<div class="project-gallery ${p.orientation}${captioned?" captioned":""}">${items}</div>`;
 }
 
-function buildCard(p){
-  const desc = p.description
-    ? `<p>${esc(p.description)}</p>`
-    : `<p class="desc-muted">Description to be added.</p>`;
-  const contrib = (p.contributions && p.contributions.length)
-    ? `<h4>Key Contributions</h4><ul>${p.contributions.map(c=>`<li>${esc(c)}</li>`).join("")}</ul>`
-    : "";
-  return `<div class="project-card">
-    ${buildMedia(p)}
-    <div class="project-content">
+function buildContributions(p){
+  const c=p.contributions||[];
+  if(!c.length) return "";
+  const li=arr=>arr.map(x=>`<li>${esc(x)}</li>`).join("");
+  if(!p.featured){
+    return `<details class="more"><summary><span class="when-closed">Key contributions</span><span class="when-open">Hide contributions</span></summary><ul>${li(c)}</ul></details>`;
+  }
+  const shown=c.slice(0,4), rest=c.slice(4);
+  return `<h4>Key Contributions</h4><ul>${li(shown)}</ul>` + (rest.length
+    ? `<details class="more"><summary><span class="when-closed">Show ${rest.length} more</span><span class="when-open">Show less</span></summary><ul>${li(rest)}</ul></details>` : "");
+}
+
+function buildCard(p,idx){
+  const desc = p.description ? `<p>${esc(p.description)}</p>` : `<p style="color:var(--muted);font-style:italic">Description to be added.</p>`;
+  const tags = (p.tags&&p.tags.length) ? `<div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>` : "";
+  const links = (p.links&&p.links.length) ? `<div class="project-links">${p.links.map(l=>`<a class="btn btn-secondary" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>` : "";
+  const body = `<div class="project-content">
       <h3>${esc(p.title)}</h3>
-      <div class="project-role"><strong>Role:</strong> ${esc(p.role)}</div>
-      ${desc}
-      ${contrib}
-      ${buildGallery(p)}
-    </div>
-  </div>`;
+      <div class="project-role">${esc(p.role)}</div>
+      ${tags}${desc}${buildContributions(p)}${links}${buildGallery(p,idx)}
+    </div>`;
+  const media = buildMedia(p,idx);
+  return p.featured
+    ? `<article class="project-card featured reveal${media?"":" no-media"}"><div class="featured-inner">${media}${body}</div></article>`
+    : `<article class="project-card compact reveal">${buildMedia(p,idx)}${body}</article>`;
 }
 
-document.getElementById("projectsGrid").innerHTML = projects.map(buildCard).join("");
+const cards = projects.map((p,i)=>({p,html:buildCard(p,i)}));
+document.getElementById("featuredList").innerHTML = cards.filter(c=>c.p.featured).map(c=>c.html).join("");
+document.getElementById("compactGrid").innerHTML  = cards.filter(c=>!c.p.featured).map(c=>c.html).join("");
 
-/* ---- autoplay videos only while on screen ---- */
-const observer=new IntersectionObserver(entries=>{
+/* ---- videos: autoplay while on screen, with a pause control ----
+   - a video the visitor paused stays paused when scrolled back into view
+   - visitors who prefer reduced motion get no autoplay, only the play button */
+const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function syncToggle(v){
+  const b=v.parentElement.querySelector(".vid-toggle"); if(!b) return;
+  const title=v.getAttribute("aria-label").replace(/ gameplay video$/,"");
+  b.innerHTML = v.paused ? PLAY_ICON : PAUSE_ICON;
+  b.setAttribute("aria-label",(v.paused?"Play ":"Pause ")+title+" video");
+  v.parentElement.classList.toggle("is-paused",v.paused);
+}
+function toggleVideo(v){
+  if(v.paused){ v.dataset.userPaused=""; v.play().catch(()=>{}); }
+  else { v.dataset.userPaused="1"; v.pause(); }
+}
+const videoObserver=new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.play().catch(()=>{});}
-    else{entry.target.pause();}
+    const v=entry.target;
+    if(entry.isIntersecting){ if(!reduceMotion && !v.dataset.userPaused) v.play().catch(()=>{}); }
+    else if(!v.paused){ v.pause(); }
   });
-},{threshold:0.4});
-document.querySelectorAll('.project-video').forEach(v=>observer.observe(v));
+},{threshold:0.35});
+document.querySelectorAll('.project-video').forEach(v=>{
+  ["play","pause"].forEach(ev=>v.addEventListener(ev,()=>syncToggle(v)));
+  v.addEventListener("click",()=>toggleVideo(v));
+  v.parentElement.querySelector(".vid-toggle").addEventListener("click",()=>toggleVideo(v));
+  syncToggle(v);
+  videoObserver.observe(v);
+});
+
+/* ---- reveal on scroll ---- */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("visible"); revealObserver.unobserve(e.target); } });
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+/* ---- mobile nav ---- */
+const navToggle=document.getElementById("navToggle"), navLinks=document.getElementById("navLinks");
+navToggle.addEventListener("click",()=>{
+  const open=navLinks.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded",open);
+  navToggle.setAttribute("aria-label",open?"Close menu":"Open menu");
+});
+navLinks.addEventListener("click",e=>{ if(e.target.tagName==="A"){ navLinks.classList.remove("open"); navToggle.setAttribute("aria-expanded","false"); } });
+
+/* ---- lightbox ---- */
+const lb=document.getElementById("lightbox"), lbImg=document.getElementById("lbImg"), lbCount=document.getElementById("lbCount");
+let lbProject=null, lbIndex=0, lbReturn=null;
+function lbShow(){
+  const p=projects[lbProject];
+  const x=p.images[lbIndex], cap=imgCap(x);
+  lbImg.src=asset(p.folder,imgFile(x));
+  lbImg.alt=cap||`${p.title} screenshot ${lbIndex+1}`;
+  lbCount.textContent=`${p.title} · ${cap?cap+" · ":""}${lbIndex+1} / ${p.images.length}`;
+  const multi=p.images.length>1;
+  document.getElementById("lbPrev").hidden=!multi;
+  document.getElementById("lbNext").hidden=!multi;
+}
+function lbOpen(pi,ii){ lbReturn=document.activeElement; lbProject=pi; lbIndex=ii; lbShow(); lb.classList.add("open"); document.body.style.overflow="hidden"; document.getElementById("lbClose").focus(); }
+function lbClose(){ lb.classList.remove("open"); document.body.style.overflow=""; if(lbReturn) lbReturn.focus(); }
+function lbStep(d){ const n=projects[lbProject].images.length; lbIndex=(lbIndex+d+n)%n; lbShow(); }
+document.addEventListener("click",e=>{
+  const img=e.target.closest("img[data-project]");
+  if(img && !lb.contains(img)){ lbOpen(+img.dataset.project, +img.dataset.index); }
+});
+document.getElementById("lbClose").addEventListener("click",lbClose);
+document.getElementById("lbPrev").addEventListener("click",()=>lbStep(-1));
+document.getElementById("lbNext").addEventListener("click",()=>lbStep(1));
+lb.addEventListener("click",e=>{ if(e.target===lb) lbClose(); });
+document.addEventListener("keydown",e=>{
+  if(!lb.classList.contains("open")) return;
+  if(e.key==="Escape") lbClose();
+  else if(e.key==="ArrowLeft") lbStep(-1);
+  else if(e.key==="ArrowRight") lbStep(1);
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
